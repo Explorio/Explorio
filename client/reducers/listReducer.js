@@ -1,7 +1,7 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  currentUserID: null,
+  currentUserID: 'Jason123',
   userVisitedCountries: [],
   userDestinationCountries: [],
   userFriends: [],
@@ -12,9 +12,12 @@ const initialState = {
 
 const listReducer = (state = initialState, action) => {
   
-  switch (action.type) {
-    case types.ADD_FRIEND:
-      
+  // switch (action.type) {
+  //   case types.LOG_IN:
+
+  // }
+  return {
+    ...initialState
   }
 };
 
