@@ -1,7 +1,7 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  currentUserID: 'Jason123',
+  currentUsername: 'Jason123', 
   userVisitedCountries: [],
   userDestinationCountries: [],
   userFriends: [],
