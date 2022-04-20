@@ -9,6 +9,7 @@
     "build": "NODE_ENV=production webpack",
     "dev": "concurrently \"cross-env NODE_ENV=development webpack serve --open\" \"cross-env NODE_ENV=development nodemon server/server.js \""
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simonchn160/Explorio.git"
@@ -53,6 +54,8 @@
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "path": "^0.12.7",
+    "prettier": "^2.6.2",
+    "redux-devtools-extension": "^2.13.9",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.50.0",
     "sass-loader": "^12.6.0",
