@@ -1,9 +1,11 @@
 const { Pool } = require('pg');
+// import { Pool } from 'pg';
 
-const pgUrl = 'postgres://unvlkyje:sJbFfEtJqhIdsHsOKwjl5rPaIvQkqpuR@rajje.db.elephantsql.com/unvlkyje';
+const pgUrl =
+  'postgres://unvlkyje:sJbFfEtJqhIdsHsOKwjl5rPaIvQkqpuR@rajje.db.elephantsql.com/unvlkyje';
 
 const pool = new Pool({
-  connectionString: pgUrl,
+  connectionString: pgUrl
 });
 
 pool.query(`CREATE TABLE IF NOT EXISTS users (
@@ -28,5 +30,5 @@ module.exports = {
   query: (text, params, callback) => {
     console.log('executed query', text);
     return pool.query(text, params, callback);
-  },
+  }
 };

@@ -43,18 +43,20 @@
   .pin-icon {
     font-size: 10vw;
   }
+}
+
 body {
   margin: 0;
 }
 
 #sayHi {
-  color: red
+  color: red;
 }
 
 #splash-page {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to right bottom,#d1bad2, #2884b8);
+  background-image: linear-gradient(to right bottom, #d1bad2, #2884b8);
   display: flex;
   flex-direction: column;
   align-items: center;
