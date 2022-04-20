@@ -1,4 +1,5 @@
-export const LOG_IN = 'LOG_IN';
+export const UPDATE_USERNAME = 'UPDATE_USERNAME';
 export const SIGN_UP = 'SIGN_UP';
+export const GET_ALL_LOCATIONS = 'GET_ALL_LOCATIONS';
 export const ADD_FRIEND = 'ADD_FRIEND';
 export const UPDATE_LOCATION = 'UPDATE_LOCATION';

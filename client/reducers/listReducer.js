@@ -22,6 +22,12 @@ const listReducer = (state = initialState, action) => {
       const updatedPlacesWantToVisit = action.payload;
       return { ...state, placesWantToVisit: updatedPlacesWantToVisit };
     }
+    case types.UPDATE_USERNAME: {
+      return {
+        ...state,
+        currentUsername: action.payload
+      };
+    }
 
     default:
       return state;
