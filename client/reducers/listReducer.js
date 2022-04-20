@@ -1,37 +1,36 @@
 import * as types from '../constants/actionTypes';
 
 const initialState = {
-  currentUsername: 'Jason123',
+  currentUsername: '',
   currentUserId: '',
-  userVisitedCountries: [],
-  userDestinationCountries: [],
+  placesVisited: [],
+  placesWantToVisit: [],
   userFriends: [],
   friendSelected: false,
   friendVisitedCountries: [],
-  friendDestinationCountries: [],
-}
+  friendDestinationCountries: []
+};
 
 const listReducer = (state = initialState, action) => {
-  
-  // switch (action.type) {
-  //   case types.LOG_IN:
-  switch(action.type) {
-    case types.UPDATE_USERNAME:
+  switch (action.type) {
+    case types.UPDATE_PLACES_VISITED: {
+      const updatedPlacesVisited = action.payload;
+      return { ...state, placesVisited: updatedPlacesVisited };
+    }
+
+    case types.UPDATE_PLACES_WANT_TO_VISIT: {
+      const updatedPlacesWantToVisit = action.payload;
+      return { ...state, placesWantToVisit: updatedPlacesWantToVisit };
+    }
+    case types.UPDATE_USERNAME: {
       return {
         ...state,
         currentUsername: action.payload
       };
-    // case types.GET_ALL_LOCATIONS:
-    //   const userObj = action.payload;
-    //   const userVisitedCountries = userObj.placesVisitedArray;
-    //   const userDestinationCountries = userObj.placesWantToVisitArray;
+    }
 
-    //   return {
-    //     ...state,
-    //     userVisitedCountries,
-    //     userDestinationCountries,
-    //   };
-
+    default:
+      return state;
   }
 };
 

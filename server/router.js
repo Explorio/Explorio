@@ -1,6 +1,8 @@
-const express = require('express')
+const express = require('express');
+// import express from 'express';
 
 const authController = require('./controllers/authController');
+// import authController from './controllers/authController';
 
 const router = express.Router();
 
@@ -14,7 +16,6 @@ router.post('/login', authController.logIn, (req, res) => {
 
 router.post('/addLocation', authController.addLocation, (req, res) => {
   res.status(200).json(res.locals.allLocations);
-})
-
+});
 
 module.exports = router;

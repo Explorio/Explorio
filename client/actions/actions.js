@@ -29,3 +29,15 @@ export const updateLocationActionCreator = (username) => ({
   type: types.UPDATE_LOCATION,
   payload: username
 });
+
+export const updatePlacesVisitedActionCreator = (placesVisitedArray) => ({
+  type: types.UPDATE_PLACES_VISITED,
+  payload: placesVisitedArray
+});
+
+export const updatePlacesWantToVisitActionCreator = (
+  placesWantToVisitArray
+) => ({
+  type: types.UPDATE_PLACES_WANT_TO_VISIT,
+  payload: placesWantToVisitArray
+});
