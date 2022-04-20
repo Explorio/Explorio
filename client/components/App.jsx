@@ -1,21 +1,26 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react';
+// import { connect } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Splash from './Splash.jsx';
+import SignUpLogInPage from './SignUpLogInPage.jsx';
 
-const mapStateToProps = state => (
-  {
-    username: state.list.currentUserID,
-  }  
-);
+// const mapStateToProps = state => (
+//   {
+//     username: state.list.currentUsername,
+//   }  
+// );
 
-const App = (props) => {
+const App = () => {
   return (
-    <div>
-      <h1 id='sayHi'>HI!!!</h1>
-      <h1 >{props.username}</h1>
-    </div>
+    <Router>
+        <Routes>
+            <Route path='/' element={<SignUpLogInPage />} />
+            <Route path='/SignUpLogIn' element={<SignUpLogInPage />} />
+        </Routes>
+    </Router>
   )
 };
 
-
-export default connect(mapStateToProps, null)(App);
+export default App;
+// export default connect(mapStateToProps, null)(App);
 

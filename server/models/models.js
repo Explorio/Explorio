@@ -16,7 +16,9 @@ pool.query(`CREATE TABLE IF NOT EXISTS users (
 
 pool.query(`CREATE TABLE IF NOT EXISTS countries (
   id serial PRIMARY KEY,
-  country VARCHAR,
+  location VARCHAR,
+  lat DECIMAL,
+  long DECIMAL,
   visitedCountries boolean,
   destinationCountries boolean,
   userId INTEGER REFERENCES users(id)
