@@ -2,7 +2,7 @@ import { Divider } from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { async } from 'regenerator-runtime';
+
 import { updateVisitedCoordinatesActionCreator, updateWantToVisitCoordinatesActionCreator} from '/actions.js'
 
 const InputBar = () => {

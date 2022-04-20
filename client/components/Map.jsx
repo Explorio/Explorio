@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 import '../styles.scss';
 
-import useStyles from './styles.js';
+import useStyles from './Map/styles.js';
 
 // AIzaSyDe0wrLQxDD68cZIPk4ZG4RAnhCj0dS8Qo
 
